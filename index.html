@@ -9,7 +9,6 @@
       background-color: #1a001a;
       color: white;
       font-family: 'Segoe UI', sans-serif;
-      text-align: center;
       padding: 2rem;
     }
 
@@ -20,18 +19,30 @@
       object-fit: cover; /* Keeps the image proportional inside the circle */
       border: 3px solid white;
       margin-bottom: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    p.bio {
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: rgba(255, 255, 255, 0.8); /* Light color for the bio */
+      margin-bottom: 2rem;
+      text-align: center;
     }
 
     .link-button {
       position: relative;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: center; /* Align icon and text horizontally */
+      justify-content: flex-start; /* Align content to the left */
       width: 80%;
       max-width: 400px;
       margin: 1rem auto;
@@ -48,43 +59,47 @@
       transition: transform 0.2s, box-shadow 0.3s, background-position 1s ease-in-out;
     }
 
+    .link-button .text-container {
+      margin-left: 1rem; /* Space between icon and text */
+      display: flex;
+      flex-direction: column; /* Stack the main text and description vertically */
+      align-items: flex-start; /* Align text to the left */
+    }
+
+    .link-button .description {
+      font-size: 0.9rem; /* Make description slightly smaller */
+      font-weight: normal;
+      color: rgba(255, 255, 255, 0.8); /* Light color for the description */
+      margin-top: 0.3rem;
+    }
+
     .link-button:hover {
       transform: scale(1.05);
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-      background-position: right center;
     }
 
     .icon {
-      position: absolute;
-      right: -40px;
-      opacity: 0;
       font-size: 1.5rem;
-      transition: right 0.4s ease, opacity 0.4s ease;
-    }
-
-    .link-button:hover .icon {
-      right: 20px;
-      opacity: 1;
     }
 
     .youtube {
       background: linear-gradient(to right, #ff0000, #ffffff);
     }
 
-    .youtube .icon {
-      color: #ff0000;
-    }
-
     .discord {
-      background: linear-gradient(to right, #7289da, #99aaff);
+      background: linear-gradient(to right, #7289da, #9b59b6); /* From blue to purple-ish */
     }
 
     .x {
-      background: linear-gradient(to right, #000000, #333333);
+      background: linear-gradient(to right, #000000, #ffffff); /* From black to white */
     }
 
     .tiktok {
       background: linear-gradient(to right, #000000, #ff69b4);
+    }
+
+    .instagram {
+      background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); /* Instagram-like gradient */
     }
   </style>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -92,18 +107,42 @@
 <body>
   <img src="https://github.com/teriyakiflows/teriyaki/blob/main/image%20(1).png?raw=true" alt="Teriyaki Profile" class="profile-img">
   <h1>Teriyaki</h1>
+  <p class="bio">Content creator, gamer, and tech enthusiast. Follow my journey across my social media!</p>
 
   <a class="link-button youtube" href="https://www.youtube.com/@Teriyaki-v2f" target="_blank">
-    YouTube <i class="fab fa-youtube icon"></i>
+    <i class="fab fa-youtube icon"></i>
+    <div class="text-container">
+      <div>YouTube</div>
+      <p class="description">Subscribe for more amazing content and videos!</p>
+    </div>
   </a>
   <a class="link-button discord" href="https://discord.gg/FdazJepH" target="_blank">
-    Join My Discord <i class="fab fa-discord icon"></i>
+    <i class="fab fa-discord icon"></i>
+    <div class="text-container">
+      <div>Join My Discord</div>
+      <p class="description">Join my community and chat with fellow members</p>
+    </div>
   </a>
   <a class="link-button x" href="https://x.com/TeriyakiFlow" target="_blank">
-    Follow Me on X <i class="fab fa-x-twitter icon"></i>
+    <i class="fab fa-x-twitter icon"></i>
+    <div class="text-container">
+      <div>Follow Me on X</div>
+      <p class="description">Follow for updates and quick thoughts</p>
+    </div>
   </a>
   <a class="link-button tiktok" href="https://www.tiktok.com/@teriyaki.flow" target="_blank">
-    Watch My TikToks <i class="fab fa-tiktok icon"></i>
+    <i class="fab fa-tiktok icon"></i>
+    <div class="text-container">
+      <div>Watch My TikToks</div>
+      <p class="description">Short videos and highlights</p>
+    </div>
+  </a>
+  <a class="link-button instagram" href="https://www.instagram.com/teriyakiflows" target="_blank">
+    <i class="fab fa-instagram icon"></i>
+    <div class="text-container">
+      <div>Instagram</div>
+      <p class="description">About me and highlights</p>
+    </div>
   </a>
 </body>
 </html>
