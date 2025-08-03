@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teriyaki Links</title>
+  <style>
+    body {
+      background-color: #1a001a;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .link-button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      max-width: 400px;
+      margin: 1rem auto;
+      padding: 1rem;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      background-size: 200% 200%;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.3s, background-position 1s ease-in-out;
+    }
+
+    .link-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+      background-position: right center;
+    }
+
+    .icon {
+      position: absolute;
+      right: -40px;
+      opacity: 0;
+      font-size: 1.5rem;
+      transition: right 0.4s ease, opacity 0.4s ease;
+    }
+
+    .link-button:hover .icon {
+      right: 20px;
+      opacity: 1;
+    }
+
+    .youtube {
+      background: linear-gradient(to right, #ff0000, #ffffff);
+    }
+
+    .youtube .icon {
+      color: #ff0000;
+    }
+
+    .discord {
+      background: linear-gradient(to right, #7289da, #99aaff);
+    }
+
+    .x {
+      background: linear-gradient(to right, #000000, #333333);
+    }
+
+    .tiktok {
+      background: linear-gradient(to right, #000000, #ff69b4);
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAl5klEQVR4nO2deXxU1fn/n3PuvXNnzS" alt="Teriyaki Profile" class="profile-img">
+  <h1>Teriyaki</h1>
+
+  <a class="link-button youtube" href="http://www.youtube.com/@Teriyaki-v2f" target="_blank">
+    YouTube <i class="fab fa-youtube icon"></i>
+  </a>
+  <a class="link-button discord" href="https://discord.gg/FdazJepH" target="_blank">
+    Join My Discord <i class="fab fa-discord icon"></i>
+  </a>
+  <a class="link-button x" href="https://x.com/Teriyakiflow" target="_blank">
+    Follow Me on X <i class="fab fa-x-twitter icon"></i>
+  </a>
+  <a class="link-button tiktok" href="https://www.tiktok.com/@teriyaki.flow" target="_blank">
+    Watch My TikToks <i class="fab fa-tiktok icon"></i>
+  </a>
+</body>
+</html>
