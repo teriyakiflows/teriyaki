@@ -42,7 +42,7 @@
       position: relative;
       display: flex;
       align-items: center; /* Align icon and text horizontally */
-      justify-content: flex-start; /* Align content to the left */
+      justify-content: space-between; /* Align text to the left and arrow to the right */
       width: 80%;
       max-width: 400px;
       margin: 1rem auto;
@@ -64,6 +64,7 @@
       display: flex;
       flex-direction: column; /* Stack the main text and description vertically */
       align-items: flex-start; /* Align text to the left */
+      flex-grow: 1; /* Allow text-container to take available space */
     }
 
     .link-button .description {
@@ -82,8 +83,13 @@
       font-size: 1.5rem;
     }
 
+    .arrow {
+      font-size: 1.2rem; /* Reduced the arrow size */
+      margin-left: 10px; /* Space between text and arrow */
+    }
+
     .youtube {
-      background: linear-gradient(to right, #ff0000, #ffffff);
+      background: linear-gradient(to right, #ff6666, #b30000); /* Lighter red to darker red */
     }
 
     .discord {
@@ -91,7 +97,7 @@
     }
 
     .x {
-      background: linear-gradient(to right, #000000, #ffffff); /* From black to white */
+      background: linear-gradient(to right, #000000, #333333); /* Black to dark grey */
     }
 
     .tiktok {
@@ -115,6 +121,7 @@
       <div>YouTube</div>
       <p class="description">Subscribe for more amazing content and videos!</p>
     </div>
+    <i class="fas fa-external-link-alt arrow"></i> <!-- Arrow -->
   </a>
   <a class="link-button discord" href="https://discord.gg/FdazJepH" target="_blank">
     <i class="fab fa-discord icon"></i>
@@ -122,6 +129,7 @@
       <div>Join My Discord</div>
       <p class="description">Join my community and chat with fellow members</p>
     </div>
+    <i class="fas fa-external-link-alt arrow"></i> <!-- Arrow -->
   </a>
   <a class="link-button x" href="https://x.com/TeriyakiFlow" target="_blank">
     <i class="fab fa-x-twitter icon"></i>
@@ -129,6 +137,7 @@
       <div>Follow Me on X</div>
       <p class="description">Follow for updates and quick thoughts</p>
     </div>
+    <i class="fas fa-external-link-alt arrow"></i> <!-- Arrow -->
   </a>
   <a class="link-button tiktok" href="https://www.tiktok.com/@teriyaki.flow" target="_blank">
     <i class="fab fa-tiktok icon"></i>
@@ -136,6 +145,7 @@
       <div>Watch My TikToks</div>
       <p class="description">Short videos and highlights</p>
     </div>
+    <i class="fas fa-external-link-alt arrow"></i> <!-- Arrow -->
   </a>
   <a class="link-button instagram" href="https://www.instagram.com/teriyakiflows" target="_blank">
     <i class="fab fa-instagram icon"></i>
@@ -143,6 +153,7 @@
       <div>Instagram</div>
       <p class="description">About me and highlights</p>
     </div>
+    <i class="fas fa-external-link-alt arrow"></i> <!-- Arrow -->
   </a>
 </body>
 </html>
